@@ -165,7 +165,7 @@ const About = () => {
                             <div className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300">
                                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-orange-100 to-yellow-100">
                                     <img
-                                        src="/prj.png"
+                                        src="/pr.png"
                                         alt="Prajwal Jha"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         onError={(e) => {

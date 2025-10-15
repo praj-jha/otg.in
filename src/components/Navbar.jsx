@@ -307,7 +307,7 @@ export const Navbar = ({ className, ...props }) => {
             </button>
             <div
               id={`desktop-dropdown-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-              className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-gray-900/95 backdrop-blur-md py-2 shadow-lg ring-1 ring-white/10 transition-all duration-200 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible"
+              className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-gray-900 py-2 shadow-lg ring-1 ring-white/10 transition-all duration-200 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible"
               role="menu"
               aria-hidden="true"
             >
@@ -347,7 +347,7 @@ export const Navbar = ({ className, ...props }) => {
     <header ref={navRef} role="banner">
       <nav
         className={cn(
-          'fixed z-50 w-full transition-all duration-300 bg-gray-900 backdrop-blur-md shadow-sm border-b border-gray-800'
+          'fixed z-50 w-full transition-all duration-300 bg-gray-900 shadow-sm border-b border-gray-800'
         )}
         role="navigation"
         aria-label="Main navigation"
@@ -377,8 +377,7 @@ export const Navbar = ({ className, ...props }) => {
             {/* Desktop Navigation */}
             <div
               className={cn(
-                'hidden lg:flex absolute left-1/2 transform -translate-x-1/2 transition-transform duration-300',
-                scrolled && 'scale-95'
+                'hidden lg:flex absolute left-1/2 transform -translate-x-1/2'
               )}
             >
               <ul className="flex gap-8 text-sm" role="menubar">
@@ -389,8 +388,7 @@ export const Navbar = ({ className, ...props }) => {
             {/* Desktop Buttons */}
             <div
               className={cn(
-                'hidden lg:flex gap-3 transition-transform duration-300',
-                scrolled && 'scale-95'
+                'hidden lg:flex gap-3'
               )}
             >
               <Button
@@ -421,14 +419,14 @@ export const Navbar = ({ className, ...props }) => {
             >
               <Menu
                 className={cn(
-                  'size-6 transition-all duration-200',
+                  'size-6 text-white transition-all duration-200',
                   menuState && 'rotate-180 scale-0 opacity-0'
                 )}
                 aria-hidden="true"
               />
               <X
                 className={cn(
-                  'absolute inset-0 m-auto size-6 transition-all duration-200',
+                  'absolute inset-0 m-auto size-6 text-white transition-all duration-200',
                   menuState ? 'rotate-0 scale-100 opacity-100' : '-rotate-180 scale-0 opacity-0'
                 )}
                 aria-hidden="true"

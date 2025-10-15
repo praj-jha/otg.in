@@ -6,21 +6,26 @@ import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button
 import { TextRotate } from '@/components/ui/text-rotate'
 import { LavaLamp } from '@/components/ui/fluid-blob'
 
+// Check if mobile device
+const isMobileDevice = () => typeof window !== 'undefined' && window.innerWidth <= 768;
+
 const transitionVariants = {
     item: {
         hidden: {
             opacity: 0,
-            filter: 'blur(12px)',
+            // Remove blur filter on mobile for better performance
+            ...(isMobileDevice() ? {} : { filter: 'blur(12px)' }),
             y: 12,
         },
         visible: {
             opacity: 1,
-            filter: 'blur(0px)',
+            ...(isMobileDevice() ? {} : { filter: 'blur(0px)' }),
             y: 0,
             transition: {
-                type: 'spring',
-                bounce: 0.3,
-                duration: 1.5,
+                // Simpler transition on mobile
+                type: isMobileDevice() ? 'tween' : 'spring',
+                bounce: isMobileDevice() ? 0 : 0.3,
+                duration: isMobileDevice() ? 0.3 : 1.5,
             },
         },
     },

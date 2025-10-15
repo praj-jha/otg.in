@@ -123,3 +123,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Disable expensive visual effects on mobile */
+  *[class*="backdrop-blur"],
+  *[class*="blur-"] {
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+  
+  /* Optimize GPU acceleration for scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Optimize animations for 60fps */
+  * {
+    will-change: auto !important;
+  }
+  
+  /* Reduce motion for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  
+  /* Simplify shadows for better performance */
+  *[class*="shadow"] {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
+  }
+}

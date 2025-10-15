@@ -153,6 +153,32 @@ function LavaLampShader() {
 }
 
 export const LavaLamp = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    // Check if mobile on mount
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // On mobile, return a simple gradient background instead of WebGL
+  if (isMobile) {
+    return (
+      <div style={{
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)',
+        position: "absolute"
+      }} />
+    );
+  }
+
   return (
     <div style={{ width: '100%', height: '100%', background: '#000', position: "absolute" }}>
       <Canvas
@@ -166,7 +192,9 @@ export const LavaLamp = () => {
           position: [0, 0, 2]
         }}
         orthographic
-        gl={{ antialias: true }}
+        gl={{ antialias: false }}
+        dpr={1}
+        performance={{ min: 0.5 }}
       >
         <LavaLampShader />
       </Canvas>

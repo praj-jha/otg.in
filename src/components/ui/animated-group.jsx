@@ -18,6 +18,9 @@ const defaultItemVariants = {
   visible: { opacity: 1 },
 };
 
+// Check if mobile for performance optimization
+const isMobile = () => typeof window !== 'undefined' && window.innerWidth <= 768;
+
 const presetVariants = {
   fade: {
     container: defaultContainerVariants,
@@ -43,15 +46,17 @@ const presetVariants = {
   blur: {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, filter: 'blur(4px)' },
-      visible: { opacity: 1, filter: 'blur(0px)' },
+      // Disable blur on mobile for better performance
+      hidden: { opacity: 0, ...(isMobile() ? {} : { filter: 'blur(4px)' }) },
+      visible: { opacity: 1, ...(isMobile() ? {} : { filter: 'blur(0px)' }) },
     },
   },
   'blur-slide': {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, filter: 'blur(4px)', y: 20 },
-      visible: { opacity: 1, filter: 'blur(0px)', y: 0 },
+      // Disable blur on mobile for better performance
+      hidden: { opacity: 0, ...(isMobile() ? {} : { filter: 'blur(4px)' }), y: 20 },
+      visible: { opacity: 1, ...(isMobile() ? {} : { filter: 'blur(0px)' }), y: 0 },
     },
   },
   zoom: {

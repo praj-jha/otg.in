@@ -28,7 +28,7 @@ const contactInfo = [
         id: 1,
         icon: <MapPin className="h-6 w-6" />,
         title: 'Visit Us',
-        details: '123 Business Avenue, Suite 500, San Francisco, CA 94107'
+        details: '816, Laxmideep Building, Laxmi Nagar District Centre, Delhi - 110092'
     },
     {
         id: 2,

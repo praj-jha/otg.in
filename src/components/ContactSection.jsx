@@ -49,7 +49,6 @@ const contactInfo = [
         details: 'Monday - Friday: 9AM IST - 6PM IST'
     }
 ];
-
 export function ContactSection() {
     return (
         <section id="contact" className="bg-primary/5 py-24">

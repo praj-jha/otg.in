@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { TextRotate } from '@/components/ui/text-rotate'
-import { LavaLamp } from '@/components/ui/fluid-blob'
 
 // Check if mobile device
 const isMobileDevice = () => typeof window !== 'undefined' && window.innerWidth <= 768;
@@ -38,12 +37,7 @@ const handleScheduleMeeting = () => {
 
 export function HeroSection() {
     return (
-        <main className="min-h-screen overflow-hidden relative">
-            {/* Fluid blob background */}
-            <div className="absolute inset-0 -z-10 opacity-60">
-                <LavaLamp />
-            </div>
-
+        <main className="min-h-screen overflow-hidden relative bg-white">
             <section className="min-h-screen flex flex-col justify-center relative z-10">
                 <div className="relative pt-24 pb-16">
                     <div className="mx-auto max-w-7xl px-6">
@@ -63,7 +57,7 @@ export function HeroSection() {
                                 <div className="flex flex-col items-center justify-center">
                                     <div className="w-full max-w-4xl mx-auto">
                                         <h1
-                                            className="mt-8 text-balance text-6xl font-normal md:text-7xl lg:text-8xl lg:mt-16">
+                                            className="mt-8 text-balance text-6xl font-normal md:text-7xl lg:text-8xl lg:mt-16 text-gray-900">
                                             We handle your business{' '}
                                             <span className="relative">
                                                 <TextRotate
@@ -80,7 +74,7 @@ export function HeroSection() {
                                                 />
                                             </span>
                                         </h1>
-                                        <p className="mt-8 text-pretty text-xl lg:text-2xl max-w-3xl mx-auto">
+                                        <p className="mt-8 text-pretty text-xl lg:text-2xl max-w-3xl mx-auto text-gray-700">
                                             Our team brings experience across investment banking, venture capital, and operator roles, so your materials are shaped by people who've raised, invested, and scaled.
                                         </p>
                                         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">

@@ -1,20 +1,31 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar'
-import { HeroSection } from '../components/hero-section-2'
+import Hero from '../components/ui/neural-network-hero'
 import Services from '../components/ServicesSection'
-import { WhoWeWorkWithSection } from '../components/WhoWeWorkWithSection'
-import { ContactSection } from '../components/ContactSection'
 import { Footer } from '../components/Footer'
+
+const handleScheduleMeeting = () => {
+    const appointmentLink = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1r1erspdw8QBh9sMgt0ikdTjkd9nnwIv-vyoM8RcRbExxkGzREe6avsGRzzrJweVNfb25UXV9R';
+    window.open(appointmentLink, '_blank');
+};
 
 export function Home() {
     return (
         <div className="Home">
             {/* Main content */}
             <Navbar />
-            <HeroSection />
+            <Hero 
+                title="Strategic Financial Advisory for Modern Enterprises"
+                description="We bring deep expertise from investment banking, venture capital, and operating roles. From pitch decks to financial models, valuations to fundraising strategy, we help you secure capital and drive growth with precision."
+                badgeText="Investment Banking & Consulting"
+                badgeLabel="Elite"
+                ctaButtons={[
+                    { text: "Schedule a Call", href: "#get-started", primary: true, onClick: handleScheduleMeeting },
+                    { text: "View Our Services", href: "#services" }
+                ]}
+                microDetails={["Institutional Quality", "Data-Driven Insights", "Results Oriented"]}
+            />
             <Services />
-            <WhoWeWorkWithSection />
-            <ContactSection />
             <Footer />
         </div>
     )

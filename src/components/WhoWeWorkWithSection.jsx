@@ -91,7 +91,7 @@ const handleScheduleMeeting = () => {
 
 export function WhoWeWorkWithSection() {
     return (
-        <section className="py-16" style={{ backgroundImage: 'llinear-gradient(to top, #dfe9f3 0%, white 100%)' }}>
+        <section className="py-16 bg-black">
             <div className="mx-auto max-w-7xl px-6">
                 <AnimatedGroup
                     variants={{
@@ -108,10 +108,10 @@ export function WhoWeWorkWithSection() {
                     {/* Header */}
                     <div className="text-center mb-16">
 
-                        <h2 className="text-4xl md:text-5xl font-light mb-6 text-gray-900 dark:text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                        <h2 className="text-4xl md:text-5xl font-light mb-6 text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
                             Who We Work With
                         </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        <p className="text-lg text-white/75 max-w-3xl mx-auto">
                             We partner with ambitious teams across the financial ecosystem—from early-stage founders to established investment firms.
                         </p>
                     </div>
@@ -121,7 +121,7 @@ export function WhoWeWorkWithSection() {
                         {clientTypes.map((client, index) => (
                             <div
                                 key={client.id}
-                                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 group cursor-pointer transform hover:-translate-y-2 border border-gray-200 hover:border-orange-500 "
+                                className="bg-white/5 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 group cursor-pointer transform hover:-translate-y-2 border border-white/10 hover:border-orange-500"
                             >
                                 {/* Image at Top */}
                                 <div className="mb-6">
@@ -136,40 +136,40 @@ export function WhoWeWorkWithSection() {
 
                                 {/* Title and Stats */}
                                 <div className="text-center mb-6">
-                                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors mb-2">
+                                    <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors mb-2">
                                         {client.title}
                                     </h3>
                                     <div className="flex items-center justify-center gap-2">
-                                        <span className="text-xl font-bold text-black group-hover:text-orange-500 transition-colors">
+                                        <span className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
                                             {client.stats.value}
                                         </span>
-                                        <span className="text-gray-600 text-sm">{client.stats.label}</span>
+                                        <span className="text-white/70 text-sm">{client.stats.label}</span>
                                     </div>
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                                <p className="text-white/75 leading-relaxed mb-6 text-center">
                                     {client.description}
                                 </p>
 
                                 {/* Services List */}
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900 text-sm text-center">Key Services:</h4>
+                                    <h4 className="font-semibold text-white text-sm text-center">Key Services:</h4>
                                     <div className="space-y-2">
                                         {client.services.map((service, idx) => (
-                                            <div key={idx} className="flex items-center gap-3 p-2 bg-gray-50 group-hover:bg-orange-50 rounded-lg transition-colors">
-                                                <div className="w-2 h-2 bg-black group-hover:bg-orange-500 rounded-full flex-shrink-0 transition-colors"></div>
-                                                <span className="text-gray-700 text-sm font-medium">{service}</span>
+                                            <div key={idx} className="flex items-center gap-3 p-2 bg-white/5 group-hover:bg-orange-500/10 rounded-lg transition-colors">
+                                                <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0 transition-colors"></div>
+                                                <span className="text-white/80 text-sm font-medium">{service}</span>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
                                 {/* CTA Button */}
-                                <div className="text-center pt-4 border-t border-gray-100">
+                                <div className="text-center pt-4 border-t border-white/10">
                                     <InteractiveHoverButton
                                         onClick={handleScheduleMeeting}
-                                        className="bg-black text-white hover:bg-orange-500 w-full transition-colors duration-300"
+                                        className="bg-white/10 text-white hover:bg-orange-500 w-full transition-colors duration-300"
                                     >
                                         <span className="flex items-center justify-center gap-2">
                                             Get Started
@@ -183,10 +183,10 @@ export function WhoWeWorkWithSection() {
 
                     {/* Our Approach Section */}
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
                             Our Approach
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-white/75">
                             We keep things simple and outcome-driven.
                         </p>
                     </div>
@@ -199,7 +199,7 @@ export function WhoWeWorkWithSection() {
                         {approachSteps.map((step, index) => (
                             <div
                                 key={step.step}
-                                className="relative text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 z-10 border-2 border-orange-200 hover:border-orange-400"
+                                className="relative text-center p-6 rounded-xl bg-white/5 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 z-10 border-2 border-orange-500/30 hover:border-orange-400"
                                 style={{
                                     boxShadow: '0 0 20px rgba(249, 115, 22, 0.3), 0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                                     transition: 'all 0.3s ease'
@@ -215,10 +215,10 @@ export function WhoWeWorkWithSection() {
                                 <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4 relative z-20 shadow-lg">
                                     {step.step}
                                 </div>
-                                <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                                <h3 className="text-lg font-semibold mb-3 text-white">
                                     {step.title}
                                 </h3>
-                                <p className="text-gray-600 text-sm">
+                                <p className="text-white/70 text-sm">
                                     {step.description}
                                 </p>
                             </div>
@@ -226,11 +226,11 @@ export function WhoWeWorkWithSection() {
                     </div>
 
                     {/* Final CTA Section */}
-                    <div className="text-center bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-12">
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    <div className="text-center bg-gradient-to-r from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-2xl p-12 border border-orange-500/20">
+                        <h2 className="text-3xl font-bold mb-4 text-white">
                             Ready to Get Started?
                         </h2>
-                        <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                        <p className="text-lg text-white/75 mb-6 max-w-2xl mx-auto">
                             Whether you're raising capital, advising clients, or evaluating investments—we're here to strengthen what's behind your next big move.
                         </p>
 
@@ -243,7 +243,7 @@ export function WhoWeWorkWithSection() {
                                     Schedule a Call
                                 </span>
                             </InteractiveHoverButton>
-                            <div className="flex items-center gap-2 text-gray-600">
+                            <div className="flex items-center gap-2 text-white/70">
                                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                                 <span className="text-sm">Usually respond within 2 hours</span>
                             </div>

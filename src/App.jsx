@@ -1,24 +1,32 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Home } from './pages/Home'
-import { FinancialModels } from './pages/FinancialModels'
-import Valuations from './pages/Valuations'
-import PitchDecks from './pages/PitchDecks'
-import RaiseStrategy from './pages/RaiseStrategy'
+import Services from './pages/Services'
 import About from './pages/About'
+import Blogs from './pages/Blogs'
 import './App.css'
+
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/financial-models" element={<FinancialModels />} />
-          <Route path="/valuations" element={<Valuations />} />
-          <Route path="/pitch-decks" element={<PitchDecks />} />
-          <Route path="/raise-strategy" element={<RaiseStrategy />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
       </div>
     </Router>

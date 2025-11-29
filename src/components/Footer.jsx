@@ -88,9 +88,6 @@ export function Footer() {
                     <p className="text-sm text-gray-400">
                         © {currentYear} One Trillion Group India. All rights reserved.
                     </p>
-                    <p className="text-sm text-gray-400 mt-2 md:mt-0">
-                        Designed with excellence for excellence
-                    </p>
                 </div>
             </div>
         </footer>

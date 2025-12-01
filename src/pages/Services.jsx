@@ -48,7 +48,7 @@ const Services = () => {
                 "Stage-Aligned Content",
                 "Clear Narrative Arc"
             ],
-            image: "/pic3.jpg",
+            image: "/pitchdeck.webp",
         },
         {
             icon: TrendingUp,
@@ -63,7 +63,7 @@ const Services = () => {
                 "Negotiation Support",
                 "Raise Stage Preparation"
             ],
-            image: "/pic1.jpg",
+            image: "/strategy.jpg",
         },
         {
             icon: Shield,

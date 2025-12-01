@@ -79,7 +79,7 @@ const Services = () => {
                 "Commitment Letter",
                 "Approval & Funding"
             ],
-            image: "/pic2.jpg",
+            image: "/fund.jpg",
         },
         {
             icon: Shield,
@@ -94,7 +94,7 @@ const Services = () => {
                 "Medium Term Note (MTN)",
                 "Performance Bond (PB)"
             ],
-            image: "/pic3.jpg",
+            image: "/bank.webp",
         },
         {
             icon: Users,
@@ -109,7 +109,7 @@ const Services = () => {
                 "Industrial Development",
                 "Results-Oriented Solutions"
             ],
-            image: "/pic1.jpg",
+            image: "/consulting.jpg",
         }
     ];
 

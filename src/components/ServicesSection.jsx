@@ -27,7 +27,7 @@ const Services = () => {
             title: "Pitch Decks, Investment Memorandums & Blurbs",
             description: "Investor-focused narratives from 10-slide decks to 1-pagers. Sharp, informed, and aligned to your stage.",
             features: ["Investor Logic Structure", "10-slide Decks", "1-pager Summaries", "Stage-Aligned Content"],
-            image: "/pic3.jpg",
+            image: "/pitch.jpg",
             route: "/services"
         },
         {
@@ -35,7 +35,7 @@ const Services = () => {
             title: "Raise Strategy & Term Sheet Advisory",
             description: "Focused investor outreach plans and term sheet support so you're prepared at every stage of the raise.",
             features: ["Investor Outreach Planning", "Term Sheet Structuring", "Negotiation Support", "Raise Stage Preparation"],
-            image: "/pic1.jpg",
+            image: "/strategy.jpg",
             route: "/services"
         },
         {
@@ -43,7 +43,7 @@ const Services = () => {
             title: "Project Funding",
             description: "Infrastructure and project financing through non-recourse or limited-recourse financial structures.",
             features: ["Business Analysis", "Due Diligence", "Risk Evaluation", "Funding Options"],
-            image: "/pic2.jpg",
+            image: "/fund.jpg",
             route: "/services"
         },
         {
@@ -51,7 +51,7 @@ const Services = () => {
             title: "Bank Instruments & Guarantees",
             description: "Financial instruments and backstops including SBLC, LC, BG, and various trade finance solutions.",
             features: ["Standby Letter of Credit", "Bank Guarantees", "Medium Term Notes", "Performance Bonds"],
-            image: "/pic3.jpg",
+            image: "/bank.webp",
             route: "/services"
         },
         {
@@ -59,7 +59,7 @@ const Services = () => {
             title: "Business Consultancy",
             description: "Bespoke strategic solutions for start-ups, unicorns, and industrial development firms.",
             features: ["Strategic Planning", "Start-up Support", "Technology Advisory", "Industrial Development"],
-            image: "/pic1.jpg",
+            image: "/consulting.jpg",
             route: "/services"
         }
     ];
@@ -136,7 +136,7 @@ const Services = () => {
                 </div>
 
                 <div className="text-center mt-8 md:mt-12 px-4">
-                    <button 
+                    <button
                         onClick={() => navigate('/services')}
                         className="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg shadow-blue-600/30"
                     >

@@ -9,7 +9,7 @@ import { GradientButton } from "./ui/GradientButton";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  
+
   const navigate = useNavigate();
 
   const handleScheduleMeeting = () => {
@@ -26,12 +26,12 @@ export function Navbar() {
       >
         <div className="flex items-center gap-2 py-1 md:py-2 px-1 md:px-2 rounded-md flex-shrink-0">
           <button onClick={() => navigate('/')}>
-            <img 
-              src="/otglogo.png" 
-              alt="OTG Logo" 
-              className="w-24 md:w-32 h-auto object-contain" 
-        />
-      </button>
+            <img
+              src="/otglogo.png"
+              alt="OTG Logo"
+              className="w-24 md:w-32 h-auto object-contain"
+            />
+          </button>
         </div>
 
         {/* Desktop Navigation Items */}
@@ -42,25 +42,32 @@ export function Navbar() {
           >
             Services
           </button>
-          
+
+          <button
+            onClick={() => navigate('/projects')}
+            className="text-white/90 hover:text-orange-400 transition-colors"
+          >
+            Projects
+          </button>
+
           <button
             onClick={() => navigate('/about')}
             className="text-white/90 hover:text-orange-400 transition-colors"
           >
             About
           </button>
-          
-            <button
+
+          <button
             onClick={() => navigate('/blogs')}
             className="text-white/90 hover:text-orange-400 transition-colors"
           >
             Blogs
-            </button>
+          </button>
 
           <div className="flex items-center gap-2">
-            <GradientButton 
-              variant="blue" 
-              text="Contact Us" 
+            <GradientButton
+              variant="blue"
+              text="Contact Us"
               size="sm"
               onClick={() => {
                 navigate('/');
@@ -77,9 +84,9 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="lg:hidden flex items-center gap-2">
-          <Button 
-            variant="blue" 
-            size="sm" 
+          <Button
+            variant="blue"
+            size="sm"
             className="text-xs px-2 bg-blue-600 text-white hover:bg-blue-700"
             onClick={() => {
               navigate('/');
@@ -120,7 +127,7 @@ export function Navbar() {
               )}
             </svg>
           </button>
-            </div>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -129,10 +136,10 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="lg:hidden fixed inset-0 z-40 bg-black/50" 
+            className="lg:hidden fixed inset-0 z-40 bg-black/50"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <motion.div 
+            <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -150,12 +157,12 @@ export function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-            </div>
+              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold mb-2 text-orange-500">Quick Links</h3>
                   <div className="space-y-2 ml-4">
-            <button
+                    <button
                       onClick={() => {
                         navigate('/services');
                         setMobileMenuOpen(false);
@@ -163,8 +170,17 @@ export function Navbar() {
                       className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
                     >
                       Services
-            </button>
-                    <button 
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate('/projects');
+                        setMobileMenuOpen(false);
+                      }}
+                      className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
+                    >
+                      Projects
+                    </button>
+                    <button
                       onClick={() => {
                         navigate('/about');
                         setMobileMenuOpen(false);
@@ -173,7 +189,7 @@ export function Navbar() {
                     >
                       About
                     </button>
-                    <button 
+                    <button
                       onClick={() => {
                         navigate('/blogs');
                         setMobileMenuOpen(false);
@@ -189,6 +205,6 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-            </div>
+    </div>
   );
 }

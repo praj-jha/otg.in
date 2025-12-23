@@ -38,28 +38,28 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-6">
           <button
             onClick={() => navigate('/services')}
-            className="text-white/90 hover:text-orange-400 transition-colors"
+            className="text-white/90 hover:text-blue-400 transition-colors"
           >
             Services
           </button>
 
           <button
             onClick={() => navigate('/projects')}
-            className="text-white/90 hover:text-orange-400 transition-colors"
+            className="text-white/90 hover:text-blue-400 transition-colors"
           >
             Projects
           </button>
 
           <button
             onClick={() => navigate('/about')}
-            className="text-white/90 hover:text-orange-400 transition-colors"
+            className="text-white/90 hover:text-blue-400 transition-colors"
           >
             About
           </button>
 
           <button
             onClick={() => navigate('/blogs')}
-            className="text-white/90 hover:text-orange-400 transition-colors"
+            className="text-white/90 hover:text-blue-400 transition-colors"
           >
             Blogs
           </button>
@@ -160,14 +160,14 @@ export function Navbar() {
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2 text-orange-500">Quick Links</h3>
+                  <h3 className="font-semibold mb-2 text-blue-500">Quick Links</h3>
                   <div className="space-y-2 ml-4">
                     <button
                       onClick={() => {
                         navigate('/services');
                         setMobileMenuOpen(false);
                       }}
-                      className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
+                      className="block py-2 text-sm text-white/80 hover:text-blue-400 transition-colors text-left w-full"
                     >
                       Services
                     </button>
@@ -176,7 +176,7 @@ export function Navbar() {
                         navigate('/projects');
                         setMobileMenuOpen(false);
                       }}
-                      className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
+                      className="block py-2 text-sm text-white/80 hover:text-blue-400 transition-colors text-left w-full"
                     >
                       Projects
                     </button>
@@ -185,7 +185,7 @@ export function Navbar() {
                         navigate('/about');
                         setMobileMenuOpen(false);
                       }}
-                      className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
+                      className="block py-2 text-sm text-white/80 hover:text-blue-400 transition-colors text-left w-full"
                     >
                       About
                     </button>
@@ -194,7 +194,7 @@ export function Navbar() {
                         navigate('/blogs');
                         setMobileMenuOpen(false);
                       }}
-                      className="block py-2 text-sm text-white/80 hover:text-orange-400 transition-colors text-left w-full"
+                      className="block py-2 text-sm text-white/80 hover:text-blue-400 transition-colors text-left w-full"
                     >
                       Blogs
                     </button>

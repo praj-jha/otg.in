@@ -18,7 +18,7 @@ export function Home() {
             {/* Main content */}
             <Navbar />
             <Hero
-                title="Strategic Financial Advisory for Modern Enterprises"
+                title="Financial Engineering and Consulting Group"
                 description="We bring deep expertise from investment banking, venture capital, and operating roles. From pitch decks to financial models, valuations to fundraising strategy, we help you secure capital and drive growth with precision."
                 badgeText="Financial Engineering and Consulting Group"
                 badgeLabel="Elite"

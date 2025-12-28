@@ -56,14 +56,14 @@ const About = () => {
             <section className="py-20 bg-gradient-to-b from-black via-blue-950/20 to-black relative">
                 {/* Bluish gradient background effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-cyan-900/10 pointer-events-none" />
-                
+
                 <div className="max-w-4xl mx-auto px-6 relative z-10">
 
                     {/* About Us Paragraph */}
                     <div className="mb-20">
                         <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl shadow-lg border border-white/10">
                             <p className="text-xl text-white/90 font-light leading-relaxed text-center">
-                                We work with startups, investors, and consulting firms to build financial models, pitch decks, investment memos, valuations, and capital raise strategy. Our team brings experience from investment banking, venture capital, and operating roles—bringing clarity to the numbers and narratives that drive capital decisions across stages, sectors, and geographies.
+                                We work with startups, investors, and consulting firms to build financial models, pitch decks, investment memos, valuations, and capital raise strategy. As a financial engineering and consulting group, we bring deep expertise from venture capital and operating roles—bringing clarity to the numbers and narratives that drive capital decisions across stages, sectors, and geographies.
                             </p>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ export function Home() {
             <Navbar />
             <Hero
                 title="Financial Engineering and Consulting Group"
-                description="We bring deep expertise from investment banking, venture capital, and operating roles. From pitch decks to financial models, valuations to fundraising strategy, we help you secure capital and drive growth with precision."
+                description="We bring deep expertise in financial engineering, quantitative modeling, and strategic analytics. From sophisticated financial models to derivatives valuation, risk management to capital structure optimization, we deliver technical precision and data-driven insights."
                 badgeText="Financial Engineering and Consulting Group"
                 badgeLabel="Elite"
                 ctaButtons={[

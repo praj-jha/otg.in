@@ -75,7 +75,7 @@ export function HeroSection() {
                                             </span>
                                         </h1>
                                         <p className="mt-8 text-pretty text-xl lg:text-2xl max-w-3xl mx-auto text-gray-700">
-                                            Our team brings experience across investment banking, venture capital, and operator roles, so your materials are shaped by people who've raised, invested, and scaled.
+                                            We bring deep expertise from investment banking, venture capital, and operating roles. From pitch decks to financial models, valuations to fundraising strategy, we help you secure capital and drive growth with precision.
                                         </p>
                                         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
                                             <div key={1} className="p-0.5">

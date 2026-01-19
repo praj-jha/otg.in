@@ -67,17 +67,9 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <GradientButton
               variant="blue"
-              text="Contact Us"
+              text="Schedule a Call"
               size="sm"
-              onClick={() => {
-                navigate('/');
-                setTimeout(() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }, 100);
-              }}
+              onClick={handleScheduleMeeting}
             />
           </div>
         </div>
@@ -88,17 +80,9 @@ export function Navbar() {
             variant="blue"
             size="sm"
             className="text-xs px-2 bg-blue-600 text-white hover:bg-blue-700"
-            onClick={() => {
-              navigate('/');
-              setTimeout(() => {
-                const element = document.getElementById('contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 100);
-            }}
+            onClick={handleScheduleMeeting}
           >
-            Contact
+            Schedule
           </Button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

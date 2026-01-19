@@ -42,7 +42,7 @@ export function AboutSection() {
                         <div className="order-2 lg:order-1">
                             <h2 className="text-4xl font-bold tracking-tight md:text-5xl mb-6">About One Trillion Group India</h2>
                             <p className="text-xl mb-4">
-                                One Trillion Group India is a premier consulting and advisory firm dedicated to helping businesses navigate complex challenges and achieve sustainable growth across South Asia and the Indo-Pacific region.
+                                One Trillion Group India is a premier financial engineering and consulting group dedicated to helping businesses navigate complex challenges and achieve sustainable growth across South Asia and the Indo-Pacific region.
                             </p>
                             <p className="text-muted-foreground mb-6">
                                 We've built a reputation for delivering exceptional results through our unique approach that combines deep industry expertise, innovative thinking, and collaborative partnerships with our clients.

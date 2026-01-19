@@ -43,7 +43,7 @@ export function Footer() {
                             <img src="/otglogo.png" alt="One Trillion Group India Logo" className="h-12 w-auto" />
                         </div>
                         <p className="mt-4 text-gray-400 max-w-xs">
-                            A premier consulting and advisory firm helping businesses navigate complex challenges and achieve sustainable growth across South Asia and the Indo-Pacific region.
+                            A premier financial engineering and consulting group helping businesses navigate complex challenges and achieve sustainable growth across South Asia and the Indo-Pacific region.
                         </p>
                         <div className="flex gap-4 mt-6">
                             <a href="#" className="p-2 bg-blue-500/20 rounded-full text-blue-500 hover:bg-blue-500/30 transition-colors">

@@ -174,19 +174,19 @@ function ShaderPlane() {
 
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
-  
+
   const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
-  
+
   useGSAP(
     () => {
       if (!canvasRef.current) return;
-      
+
       gsap.set(canvasRef.current, {
         filter: 'blur(20px)',
         scale: 1.1,
         autoAlpha: 0.7
       });
-      
+
       gsap.to(canvasRef.current, {
         filter: 'blur(0px)',
         scale: 1,
@@ -198,7 +198,7 @@ function ShaderBackground() {
     },
     { scope: canvasRef }
   );
-  
+
   return (
     <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
       <Canvas
@@ -320,6 +320,25 @@ export default function Hero({
     <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden">
       <ShaderBackground />
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
+        {/* OTG Global Summit Banner */}
+        <a
+          href="/summit"
+          className="group inline-flex items-center gap-3 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white shadow-lg shadow-purple-500/10 transition-all duration-300 hover:border-purple-400/50 hover:bg-purple-500/20 hover:shadow-purple-500/20 hover:scale-[1.02]"
+        >
+          <span className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-purple-400"></span>
+            </span>
+            <span className="font-semibold text-purple-300 text-xs">LIVE</span>
+          </span>
+          <span className="h-4 w-px bg-purple-500/40"></span>
+          <span className="text-white text-xs">OTG Global Summit</span>
+          <span className="text-purple-300">•</span>
+          <span className="text-purple-200 text-xs">26 March, New Delhi</span>
+          <svg className="h-4 w-4 text-purple-300 transition-transform group-hover:translate-x-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+        </a>
+
         <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
           <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
           <span className="h-1 w-1 rounded-full bg-white/40" />
@@ -342,11 +361,10 @@ export default function Hero({
                   button.onClick();
                 }
               }}
-              className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 cursor-pointer ${
-                button.primary
-                  ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
-                  : "text-white/80 hover:bg-white/5"
-              }`}
+              className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 cursor-pointer ${button.primary
+                ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+                : "text-white/80 hover:bg-white/5"
+                }`}
             >
               {button.text}
             </a>
@@ -363,6 +381,27 @@ export default function Hero({
           })}
         </ul>
       </div>
+      {/* Scrolling Marquee Banner */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 py-3 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...Array(10)].map((_, i) => (
+            <span key={i} className="flex items-center mx-8 text-white font-semibold text-sm tracking-wide">
+              <span className="text-purple-200 mr-3">✦</span>
+              OTG Global Summit, New Delhi
+              <span className="text-purple-200 ml-3">✦</span>
+            </span>
+          ))}
+        </div>
+      </div>
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
     </section>
   );

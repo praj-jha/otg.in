@@ -64,6 +64,13 @@ export function Navbar() {
             Blogs
           </button>
 
+          <button
+            onClick={() => navigate('/summit')}
+            className="text-white/90 hover:text-purple-400 transition-colors font-medium"
+          >
+            Summit
+          </button>
+
           <div className="flex items-center gap-2">
             <GradientButton
               variant="blue"
@@ -181,6 +188,15 @@ export function Navbar() {
                       className="block py-2 text-sm text-white/80 hover:text-blue-400 transition-colors text-left w-full"
                     >
                       Blogs
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate('/summit');
+                        setMobileMenuOpen(false);
+                      }}
+                      className="block py-2 text-sm text-white/80 hover:text-purple-400 transition-colors text-left w-full font-medium"
+                    >
+                      Summit
                     </button>
                   </div>
                 </div>

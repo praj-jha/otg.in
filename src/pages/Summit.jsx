@@ -276,6 +276,7 @@ export function Summit() {
                                 works alongside entrepreneurs, corporations, and institutional investors to unlock unprecedented
                                 growth opportunities and navigate complex financial landscapes.
                             </p>
+                            
                         </div>
                     </div>
                 </div>

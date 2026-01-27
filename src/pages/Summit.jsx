@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { CometCard } from '../components/ui/comet-card'
+import { SplineScene } from '../components/ui/SplineScene'
 import { Calendar, MapPin, Users, Clock, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const speakers = [
@@ -51,8 +52,8 @@ const speakers = [
 const pricingPlans = [
     {
         name: "Early Bird",
-        price: "₹4,999",
-        originalPrice: "₹7,999",
+        price: "$99",
+        originalPrice: "$149",
         description: "Limited time offer",
         features: [
             "Full day access",
@@ -66,8 +67,8 @@ const pricingPlans = [
     },
     {
         name: "VIP Pass",
-        price: "₹14,999",
-        originalPrice: "₹19,999",
+        price: "$299",
+        originalPrice: "$399",
         description: "Premium experience",
         features: [
             "Everything in Early Bird",
@@ -82,8 +83,8 @@ const pricingPlans = [
     },
     {
         name: "Corporate",
-        price: "₹49,999",
-        originalPrice: "₹69,999",
+        price: "$999",
+        originalPrice: "$1,299",
         description: "For teams of 5",
         features: [
             "5 VIP passes included",
@@ -125,59 +126,72 @@ export function Summit() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative min-h-screen flex items-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-black" />
                 <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]" />
 
-                <div className="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-10">
-                        <span className="relative flex h-1.5 w-1.5">
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75"></span>
-                            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-purple-400"></span>
-                        </span>
-                        <span className="text-white/60 text-xs tracking-wide font-light">26 March 2026 • New Delhi</span>
-                    </div>
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-32">
+                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
+                        {/* Left side - Text content */}
+                        <div className="flex-1 text-center lg:text-left">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-10">
+                                <span className="relative flex h-1.5 w-1.5">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75"></span>
+                                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-purple-400"></span>
+                                </span>
+                                <span className="text-white/60 text-xs tracking-wide font-light">26 March 2026 • New Delhi</span>
+                            </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white mb-8 tracking-tight">
-                        OTG Global
-                        <span className="block text-purple-400 font-light">
-                            Summit 2026
-                        </span>
-                    </h1>
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white mb-8 tracking-tight">
+                                OTG Global
+                                <span className="block text-purple-400 font-light">
+                                    Summit 2026
+                                </span>
+                            </h1>
 
-                    <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-14 font-light leading-relaxed">
-                        India's premier finance and strategy conference bringing together industry leaders,
-                        investors, and innovators.
-                    </p>
+                            <p className="text-lg md:text-xl text-white/50 max-w-2xl lg:mx-0 mx-auto mb-14 font-light leading-relaxed">
+                                India's premier finance and strategy conference bringing together industry leaders,
+                                investors, and innovators.
+                            </p>
 
-                    <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
-                        <a
-                            href="#pricing"
-                            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-normal text-sm tracking-wide transition-all duration-300 hover:bg-white/90"
-                        >
-                            Register Now
-                            <ArrowRight className="w-4 h-4" />
-                        </a>
-                        <a
-                            href="#speakers"
-                            className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-8 py-4 rounded-full font-light text-sm tracking-wide transition-all duration-300 hover:border-white/40"
-                        >
-                            View Speakers
-                        </a>
-                    </div>
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-12">
+                                <a
+                                    href="#pricing"
+                                    className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-normal text-sm tracking-wide transition-all duration-300 hover:bg-white/90"
+                                >
+                                    Register Now
+                                    <ArrowRight className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href="#speakers"
+                                    className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-8 py-4 rounded-full font-light text-sm tracking-wide transition-all duration-300 hover:border-white/40"
+                                >
+                                    View Speakers
+                                </a>
+                            </div>
 
-                    <div className="flex flex-wrap items-center justify-center gap-10 text-white/40 text-sm">
-                        <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            <span className="font-light">26 March 2026</span>
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-10 text-white/40 text-sm">
+                                <div className="flex items-center gap-2">
+                                    <Calendar className="w-4 h-4" />
+                                    <span className="font-light">26 March 2026</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <MapPin className="w-4 h-4" />
+                                    <span className="font-light">New Delhi</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Users className="w-4 h-4" />
+                                    <span className="font-light">500+ Attendees</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4" />
-                            <span className="font-light">New Delhi</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Users className="w-4 h-4" />
-                            <span className="font-light">500+ Attendees</span>
+
+                        {/* Right side - Spline Robot */}
+                        <div className="flex-1 h-[400px] md:h-[500px] lg:h-[600px] w-full">
+                            <SplineScene
+                                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                                className="w-full h-full"
+                            />
                         </div>
                     </div>
                 </div>
@@ -195,6 +209,74 @@ export function Summit() {
                                 <span className="mx-6 text-purple-300">✦</span>
                             </span>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* We Are Working With Section */}
+            <section className="py-16 px-6 bg-black border-t border-white/5">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <span className="text-white/40 text-sm tracking-widest uppercase font-light">We Are Working With</span>
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
+                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                    </div>
+                </div>
+            </section>
+
+            {/* About One Trillion Group Section */}
+            <section className="py-32 px-6 bg-gradient-to-b from-black via-purple-950/10 to-black">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-purple-400 text-sm tracking-widest uppercase font-light">Who We Are</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-white mt-4 tracking-tight">
+                            About One Trillion Group
+                        </h2>
+                    </div>
+
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                        {/* Left side - Video */}
+                        <div className="flex-1 w-full">
+                            <div className="relative rounded-2xl overflow-hidden aspect-video bg-white/5 border border-white/10">
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/otg.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                {/* Gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                            </div>
+                        </div>
+
+                        {/* Right side - Content */}
+                        <div className="flex-1 text-center lg:text-left">
+                            <h3 className="text-2xl md:text-3xl font-light text-white mb-6">
+                                Pioneering <span className="text-purple-400">Financial Engineering</span> Globally
+                            </h3>
+
+                            <p className="text-white/60 text-lg leading-relaxed mb-6 font-light">
+                                One Trillion Group is a global financial engineering powerhouse, dedicated to transforming
+                                the way businesses and investors approach capital markets, strategic investments, and
+                                wealth creation.
+                            </p>
+
+                            <p className="text-white/50 text-base leading-relaxed font-light">
+                                With a presence across multiple continents, we combine cutting-edge financial technology
+                                with deep market expertise to deliver innovative solutions. Our team of seasoned professionals
+                                works alongside entrepreneurs, corporations, and institutional investors to unlock unprecedented
+                                growth opportunities and navigate complex financial landscapes.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -263,6 +345,25 @@ export function Summit() {
                         <p className="text-white/40 text-base font-light mt-6 max-w-lg mx-auto">
                             Select the experience that fits your needs.
                         </p>
+
+                        {/* Ticket Sales Progress */}
+                        <div className="mt-12 max-w-md mx-auto">
+                            <div className="flex items-center justify-between mb-3">
+                                <span className="text-white/60 text-sm font-light">Passes Sold</span>
+                                <span className="text-purple-400 text-sm font-medium">83 / 200 <span className="text-white/40 font-light">(41.5%)</span></span>
+                            </div>
+                            <div className="relative h-3 bg-white/10 rounded-full overflow-hidden">
+                                <div
+                                    className="absolute inset-y-0 left-0 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full transition-all duration-1000 ease-out"
+                                    style={{ width: '41.5%' }}
+                                />
+                                <div
+                                    className="absolute inset-y-0 left-0 bg-gradient-to-r from-purple-400/50 to-violet-400/50 rounded-full animate-pulse"
+                                    style={{ width: '41.5%' }}
+                                />
+                            </div>
+                            <p className="text-white/30 text-xs font-light mt-3">🔥 Hurry! Only 117 passes remaining</p>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -330,7 +431,7 @@ export function Summit() {
                                 <img
                                     src="/mick.jpg"
                                     alt="Director"
-                                    className="w-full h-auto max-w-[600px] object-cover"
+                                    className="w-full h-auto max-w-[550px] lg:max-w-[700px] object-cover"
                                 />
                             </div>
                         </CometCard>

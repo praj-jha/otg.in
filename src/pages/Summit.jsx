@@ -217,7 +217,7 @@ export function Summit() {
             <section className="py-16 px-6 bg-black border-t border-white/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                        <span className="text-white/40 text-sm tracking-widest uppercase font-light">We Are Working With</span>
+                        <span className="text-white/40 text-sm tracking-widest uppercase font-light">Featured Partners</span>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
                         <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
@@ -276,7 +276,7 @@ export function Summit() {
                                 works alongside entrepreneurs, corporations, and institutional investors to unlock unprecedented
                                 growth opportunities and navigate complex financial landscapes.
                             </p>
-                            
+
                         </div>
                     </div>
                 </div>

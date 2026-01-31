@@ -289,7 +289,7 @@ export function Summit() {
                         <div>
                             <span className="text-purple-400/80 text-xs font-light uppercase tracking-[0.2em]">Featured</span>
                             <h2 className="text-4xl md:text-5xl font-extralight text-white mt-3 tracking-tight">
-                                Speakers
+                                Hon'ble Speakers & Panelists
                             </h2>
                         </div>
 

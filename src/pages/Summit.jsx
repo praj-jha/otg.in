@@ -46,6 +46,16 @@ const speakers = [
         name: "Neha Kapoor",
         role: "CFO, Tech Giant",
         image: "/Rj.jpg",
+    },
+    {
+        name: "Suhas",
+        role: "Industry Expert",
+        image: "/suhas.jpeg",
+    },
+    {
+        name: "Adriana",
+        role: "Strategic Advisor",
+        image: "/adriana.jpeg",
     }
 ]
 
@@ -213,18 +223,51 @@ export function Summit() {
                 </div>
             </section>
 
-            {/* We Are Working With Section */}
-            <section className="py-16 px-6 bg-black border-t border-white/5">
+            {/* Featured Partners Section */}
+            <section className="py-24 px-6 bg-gradient-to-b from-black via-purple-950/5 to-black border-t border-white/5">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="text-white/40 text-sm tracking-widest uppercase font-light">Featured Partners</span>
+                    <div className="text-center mb-16">
+                        <span className="text-purple-400/80 text-xs font-light uppercase tracking-[0.2em]">Partnerships</span>
+                        <h2 className="text-4xl md:text-5xl font-extralight text-white mt-3 tracking-tight">
+                            Featured Partners for the Event
+                        </h2>
                     </div>
-                    <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
-                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                        <img src="/otglogo.png" alt="Partner Company" className="h-8 md:h-10 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* Svitch */}
+                        <div className="group relative rounded-2xl p-8 bg-white/[0.02] border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-500 hover:translate-y-[-4px]">
+                            <div className="absolute top-6 right-6 text-purple-400/40 text-xs font-light">01</div>
+                            <h3 className="text-white text-xl font-light mb-2 tracking-tight">Svitch</h3>
+                            <p className="text-white/40 text-sm font-light">EV Motorcycle</p>
+                        </div>
+
+                        {/* Soul Strips */}
+                        <div className="group relative rounded-2xl p-8 bg-white/[0.02] border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-500 hover:translate-y-[-4px]">
+                            <div className="absolute top-6 right-6 text-purple-400/40 text-xs font-light">02</div>
+                            <h3 className="text-white text-xl font-light mb-2 tracking-tight">Soul Strips</h3>
+                            <p className="text-white/40 text-sm font-light">Nutritional Dissolvable Supplements</p>
+                        </div>
+
+                        {/* Metabolics */}
+                        <div className="group relative rounded-2xl p-8 bg-white/[0.02] border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-500 hover:translate-y-[-4px]">
+                            <div className="absolute top-6 right-6 text-purple-400/40 text-xs font-light">03</div>
+                            <h3 className="text-white text-xl font-light mb-2 tracking-tight">Metabolics</h3>
+                            <p className="text-white/40 text-sm font-light">BioTech</p>
+                        </div>
+
+                        {/* Destination Travels */}
+                        <div className="group relative rounded-2xl p-8 bg-white/[0.02] border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-500 hover:translate-y-[-4px]">
+                            <div className="absolute top-6 right-6 text-purple-400/40 text-xs font-light">04</div>
+                            <h3 className="text-white text-xl font-light mb-2 tracking-tight">Destination Travels</h3>
+                            <p className="text-white/40 text-sm font-light">Travels and Tours</p>
+                        </div>
+
+                        {/* Amazing Party House */}
+                        <div className="group relative rounded-2xl p-8 bg-white/[0.02] border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-500 hover:translate-y-[-4px] md:col-span-2 lg:col-span-1">
+                            <div className="absolute top-6 right-6 text-purple-400/40 text-xs font-light">05</div>
+                            <h3 className="text-white text-xl font-light mb-2 tracking-tight">Amazing Party House</h3>
+                            <p className="text-white/40 text-sm font-light">"Big or Small, We Do It All"</p>
+                        </div>
                     </div>
                 </div>
             </section>
